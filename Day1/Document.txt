@@ -1,0 +1,47 @@
+How to write and execute your shell scripts ?
+  vi demo.sh
+  #!/bin/bash     (in my case i am using bash as my shell)
+  date
+  ls
+  pwd
+
+To run:
+	chmod +x demo.sh
+	./demo.sh
+
+
+
+Two types of shell scripts:
+	1.Default/system defined shell scripts
+	2.User defined shell scripts
+------------------------------------------------------
+variable: Used to store any value (number,path,name(strings,text,sentance)
+
+	Types of varialbes:
+		1.User defined variables
+		2.System variable/environment variables --printevn/env
+		3.Special Variables
+x=4
+y=6
+z="shell script"
+
+
+Rules to define variable names:
+------------------------------
+1. You can define variables with a-z,A-Z,0-9,_
+2. Dont start with number
+3. Dont take any spaces. replace space with _ if its required.
+4. Dont use any keyword as ur variable name
+5. Dont use only captials as ur varialbe names.
+6. Small and captial letters are having different meaning.
+
+
+
+
+has to read service name
+server_name status
+
+vi my_ser_sta.sh
+#!/bin/bash
+read -p "Enter your service: " my_ser
+systemctl status ${my_ser} | awk 'NR==3 {print }'
